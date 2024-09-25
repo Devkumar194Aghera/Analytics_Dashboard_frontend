@@ -6,6 +6,7 @@ import BarChart from "../components/BarChart";
 import PieChart from "../components/PieChart";
 import CandlestickChart from "../components/CandlestickChart";
 import { motion } from "framer-motion";
+import "./index.css"; // Import the CSS file
 
 const Dashboard = () => {
   const [lineData, setLineData] = useState(null);
@@ -82,7 +83,7 @@ const Dashboard = () => {
           </p>
           <button
             onClick={fetchData}
-            className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-md shadow hover:bg-blue-600 transition duration-300"
+            className="retry-button" // Use the CSS class
           >
             Retry
           </button>
@@ -92,56 +93,58 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
+    <div className="dashboard-container">
+      {" "}
+      {/* Use the CSS class */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Heading with a background */}
-        <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-lg shadow-md mb-12">
-          <h1 className="text-5xl font-extrabold text-center text-white">
+        <div className="dashboard-header">
+          {" "}
+          {/* Use the CSS class */}
+          <h1 className="dashboard-title">
             Interactive Analytics Dashboard
-          </h1>
+          </h1>{" "}
+          {/* Use the CSS class */}
         </div>
 
-        {/* 2x2 Grid for Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Line Chart */}
-          <div className="bg-gradient-to-b from-white to-gray-100 shadow-xl rounded-lg p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
-              Line Chart
-            </h2>
+          <div className="chart-card">
+            {" "}
+            {/* Use the CSS class */}
+            <h2 className="chart-title">Line Chart</h2>{" "}
+            {/* Use the CSS class */}
             <div style={{ height: "350px" }}>
               <LineChart data={lineData} />
             </div>
           </div>
 
-          {/* Pie Chart (Centered) */}
-          <div className="bg-gradient-to-b from-white to-gray-100 shadow-xl rounded-lg p-6 flex justify-center items-center">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800 text-center w-full">
-              Pie Chart
-            </h2>
+          <div className="chart-card flex justify-center items-center">
+            {" "}
+            {/* Use the CSS class */}
+            <h2 className="chart-title text-center w-full">Pie Chart</h2>{" "}
+            {/* Use the CSS class */}
             <div style={{ height: "350px" }} className="flex justify-center">
               <PieChart data={pieData} />
             </div>
           </div>
 
-          {/* Bar Chart */}
-          <div className="bg-gradient-to-b from-white to-gray-100 shadow-xl rounded-lg p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
-              Bar Chart
-            </h2>
+          <div className="chart-card">
+            {" "}
+            {/* Use the CSS class */}
+            <h2 className="chart-title">Bar Chart</h2> {/* Use the CSS class */}
             <div style={{ height: "350px" }}>
               <BarChart data={barData} />
             </div>
           </div>
 
-          {/* Candlestick Chart */}
-          <div className="bg-gradient-to-b from-white to-gray-100 shadow-xl rounded-lg p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
-              Candlestick Chart
-            </h2>
+          <div className="chart-card">
+            {" "}
+            {/* Use the CSS class */}
+            <h2 className="chart-title">Candlestick Chart</h2>{" "}
+            {/* Use the CSS class */}
             <div style={{ height: "350px" }}>
               <CandlestickChart data={candData} />
             </div>
