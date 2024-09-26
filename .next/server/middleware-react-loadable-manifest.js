@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components\\\\CandlestickChart.js -> react-apexcharts\":{\"id\":\"components\\\\CandlestickChart.js -> react-apexcharts\",\"files\":[\"static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"components\\\\CandlestickChart.js -> react-apexcharts":{"id":7229,"files":["static/chunks/6c44d60f.3b3826435339e341.js","static/chunks/229.81b90bcc011f115c.js"]}}';
